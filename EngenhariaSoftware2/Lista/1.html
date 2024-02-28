@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio1</title>
+
+</head>
+<body>
+    <script>
+        const nome = prompt('Digite seu nome:')
+        const alturaCm = prompt('Digite sua altura (em cm)')
+        const peso = prompt('Digite seu peso:')
+        
+        const alturaM = alturaCm/100
+        
+        const MassaCorporal = peso / alturaM**2
+        
+        function situação(){
+            if(MassaCorporal<16){
+                return 'Baixo peso muito grave'
+            }
+            if(MassaCorporal>16 && MassaCorporal<16.99){
+                return 'Baixo peso grave'
+            }
+            if(MassaCorporal>17 && MassaCorporal<18.49){
+                return 'Baixo peso'
+            }
+            if(MassaCorporal>18.5 && MassaCorporal<24.99){
+                return 'Peso normal'
+            }
+            if(MassaCorporal>25 && MassaCorporal<29.99){
+                return 'Sobrepeso'
+            }
+            if(MassaCorporal>30 && MassaCorporal<34.99){
+                return 'Obesidade grau I'
+            }
+            if(MassaCorporal>35 && MassaCorporal<39.99){
+                return 'Obesidade grau II'
+            }
+            if(MassaCorporal>40){
+                return 'Obesidade grau III'
+            }
+        }
+        alert(nome+', possuí índice de massa corporal igual a '+MassaCorporal.toFixed(2)+', sendo classificado como: ' +situação())
+        
+    </script>
+</body>
+</html>

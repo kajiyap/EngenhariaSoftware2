@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title> Faixa etária </title> 
+        <meta charset="utf-8"> 
+    </head> 
+    <body> 
+        <form name="formCadastro" onsubmit="return validarFormulario()" method="post"> 
+            <label for="idade">Digite a sua idade:</label> 
+            <input type="text" name="idade"> 
+            <input type="submit" value="Enviar"> 
+        </form> 
+
+        <script> 
+            function validarFormulario(){ 
+                var idade = document.forms["formCadastro"]["idade"].value; 
+                if (idade == "") { 
+                    alert("Favor informar a sua idade!"); 
+                    return false; 
+                } 
+                if (idade >= 0 && idade < 15){ 
+                    alert("Criança!"); 
+                } 
+                if (idade >= 15 && idade < 30){ 
+                    alert("Jovem!"); 
+                } 
+                if (idade >= 30 && idade < 60){ 
+                    alert("Adulto!"); 
+                } 
+                if (idade > 60){ 
+                    alert("Idoso!"); 
+                } 
+            } 
+        </script> 
+    </body> 
+    </html>
