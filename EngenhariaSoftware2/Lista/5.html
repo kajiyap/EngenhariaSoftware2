@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio5</title>
+</head>
+<body>
+    <script>
+        const num_1 = parseFloat(prompt('Insira um número:'))
+        const num_2 = parseFloat(prompt('Insira um número:'))
+        const operacao = prompt('Insira uma operação matemática básica (soma, subtração, divisão ou multiplicação):')
+        let resultado
+
+        if (operacao.toLowerCase() == 'soma' || operacao.toLowerCase() == 'adição'){
+            resultado = num_1+num_2
+        }
+        if (operacao.toLowerCase() == 'subtração'){
+            resultado = num_1-num_2
+        }
+        if (operacao.toLowerCase() == 'divisão'){
+            resultado = num_1/num_2
+        }
+        if (operacao.toLowerCase() == 'multiplicação'){
+            resultado = num_1/num_2
+        }
+
+        alert('O resultado é:'+resultado)
+    </script>
+</body>
+</html>

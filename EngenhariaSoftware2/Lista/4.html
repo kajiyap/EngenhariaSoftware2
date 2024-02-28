@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio4</title>
+</head>
+<body>
+    <script>
+        const codigo = prompt('Digite seu código de funcionário:')
+        const horasTrab = prompt('Digite o número de horas trabalhadas no mês:')
+        const turno = prompt('Digite seu turno (M-Matutino, V-Vespertino ou N-Noturno):')
+        const categoria = prompt('Digite sua categoria (G-Gerente ou F-Funcionário):')
+        const salarioMin = prompt('Digite o salário mínimo do seu estado')
+        let valorHora
+        let alimentacao
+
+        /*definição do valor da hora*/
+        if(categoria.toLowerCase() == 'g'){
+            valorHora = 4/100*salarioMin
+        }
+        else if(turno.toLowerCase() == 'm' || turno.toLowerCase() == 'v'){
+            valorHora = 1/100*salarioMin
+        }
+        else if(turno.toLowerCase() == 'n'){
+            valorHora = 2/100*salarioMin
+        }
+
+        /*calculo do salário*/
+        let salarioIni = valorHora*horasTrab
+        if(salarioIni<800){
+            alimentacao = 25/100*salarioIni
+        }
+        if(salarioIni>800 && salarioIni<1200){
+            alimentacao = 20/100*salarioIni
+        }
+        if(salarioIni>1200){
+            alimentacao = 15/100*salarioIni
+        }
+
+        let salarioFinal = salarioIni+alimentacao
+        alert('Código de funcionário: '+codigo+' | Número de horas trabalhadas: '+horasTrab+' | Valor das horas trabalhadas: '+valorHora+' | Salário inicial: '+salarioIni+' | Auxilio alimentação: '+alimentacao+ ' | Salário total: '+salarioFinal)
+        
+    </script>
+</body>
+</html>

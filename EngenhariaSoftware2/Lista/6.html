@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dataNum = prompt('Insira uma data(dd/mm/aaaa):')
+
+        dataNum = dataNum.split('/')
+        var meses = {
+            1:'janeiro',
+            2:'fevereiro',
+            3:'março',
+            4:'abril',
+            5:'maio',
+            6:'junho',
+            7:'julho',
+            8:'agosto',
+            9:'setembro',
+            10:'outubro',
+            11:'novembro',
+            12:'dezembro',
+        }
+        
+        alert(dataNum[0] + ' de '+meses[parseFloat(dataNum[1])]+' de '+dataNum[2])
+    </script>
+</body>
+</html>
