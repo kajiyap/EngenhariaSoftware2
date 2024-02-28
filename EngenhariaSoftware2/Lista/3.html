@@ -8,11 +8,16 @@
     <script>
         /*Se terá taxa de rastreamento ou não*/
         const rast = prompt ('Deseja rastreamento? Digite S para SIM e N para NÃO.')
+        let taxarast 
+        let pagamentoPeças
+        let pagamentoKm
+        let pagamentoTotal
+        let peçasDesc
         if (rast == 'S'){
-            let taxarast = 200
+            taxarast = 200
         }
         if (rast == 'N'){
-            let taxarast = 0
+            taxarast = 0
         }
 
         /*Informações para cálculo do frete*/
@@ -21,56 +26,56 @@
         const dist = prompt('Digite a distância em km para a entrega:')
         alert('pegou tudo')
         /*definindo a região*/
-        if (reg=='sul'){
+        if (reg.toLowerCase()=='sul'){
             let valorPeça = 1
             let desconto = valorPeça-(10/100)
             if (numPeças>1000){
-                let peçasDesc = numPeças-1000
+                peçasDesc = numPeças-1000
                 numPeças = 1000
-                let pagamentoPeças = numPeças*valorPeça+peçasDesc*desconto
-                let pagamentoKm = dist*5
-                let pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
+                pagamentoPeças = numPeças*valorPeça+peçasDesc*desconto
+                pagamentoKm = dist*5
+                pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
             }
             if (numPeças<1000){
-                let pagamentoPeças = numPeças*valorPeça
-                let pagamentoKm = dist*5
-                let pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
+                pagamentoPeças = numPeças*valorPeça
+                pagamentoKm = dist*5
+                pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
             }
     
             alert('Taxa de rastreamento: '+taxarast+'. Valor por peça: '+pagamentoPeças+'. Valor por km: '+pagamentoKm+'. Valor TOTAL: '+pagamentoTotal)
         }
-        if (reg=='sudeste'){
+        if (reg.toLowerCase()=='sudeste'){
             let valorPeça = 1.2
             let desconto = valorPeça-(12/100)
             if (numPeças>1000){
-                let peçasDesc = numPeças-1000
+                peçasDesc = numPeças-1000
                 numPeças = 1000
-                let pagamentoPeças = numPeças*valorPeça+peçasDesc*desconto
-                let pagamentoKm = dist*5
-                let pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
+                pagamentoPeças = numPeças*valorPeça+peçasDesc*desconto
+                pagamentoKm = dist*5
+                pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
             }
             if (numPeças<1000){
-                let pagamentoPeças = numPeças*valorPeça
-                let pagamentoKm = dist*5
-                let pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
+                pagamentoPeças = numPeças*valorPeça
+                pagamentoKm = dist*5
+                pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
             }
     
             alert('Taxa de rastreamento: '+taxarast+'. Valor por peça: '+pagamentoPeças+'. Valor por km: '+pagamentoKm+'. Valor TOTAL: '+pagamentoTotal)
         }
-        if (reg=='centro-oeste'){
+        if (reg.toLowerCase()=='centro-oeste'){
             let valorPeça = 1.3
             let desconto = valorPeça-(13/100)
             if (numPeças>1000){
-                let peçasDesc = numPeças-1000
+                peçasDesc = numPeças-1000
                 numPeças = 1000
-                let pagamentoPeças = numPeças*valorPeça+peçasDesc*desconto
-                let pagamentoKm = dist*5
-                let pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
+                pagamentoPeças = numPeças*valorPeça+peçasDesc*desconto
+                pagamentoKm = dist*5
+                pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
             }
             if (numPeças<1000){
-                let pagamentoPeças = numPeças*valorPeça
-                let pagamentoKm = dist*5
-                let pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
+                pagamentoPeças = numPeças*valorPeça
+                pagamentoKm = dist*5
+                pagamentoTotal = pagamentoPeças+taxarast+pagamentoKm
             }
     
             alert('Taxa de rastreamento: '+taxarast+'. Valor por peça: '+pagamentoPeças+'. Valor por km: '+pagamentoKm+'. Valor TOTAL: '+pagamentoTotal)
